@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<style>
+body{
+    background-color: black;
+}
+.bth{
+    margin: 0.4rem;
+}
+button{
+    font-size: 2rem;
+    color: white;
+    background-color: darkslateblue;
+}
+button:hover{
+    font-size: 2rem;
+    color: darkslateblue;
+    background-color: white;
+}
+input{
+    font-size: 2rem;
+    margin: 0.8rem;    
+}
+.bbox{
+    width: 30rem;
+}
+</style>
+
+<script>
+function googleq() {
+    var searchq = document.getElementById("inputid").value;
+    window.open("https://www.google.com/search?q=" + searchq, "_blank");
+}
+function githubq() {
+    var searchq = document.getElementById("inputid").value;
+    window.open("https://github.com/search?q=" + searchq, "_blank");
+}
+function googlecvesite() {
+    var searchq = document.getElementById("inputid").value;
+    window.open('https://www.google.com/search?q="site:https://www.cvedetails.com ' + searchq, "_blank");
+}
+function msdocsq() {
+    var searchq = document.getElementById("inputid").value;
+    window.open('https://docs.microsoft.com/en-us/search/?terms=' + searchq, "_blank");
+}
+function torshit() {
+    var searchq = document.getElementById("inputid").value;
+    window.open('https://ahmia.fi/search/?q=' + searchq, "_blank");
+}
+function ddg() {
+    var searchq = document.getElementById("inputid").value;
+    window.open('https://duckduckgo.com/?q=' + searchq, "_blank");
+}
+function combinedtabs(){
+    var searchq = document.getElementById("inputid").value;
+    window.open('https://docs.microsoft.com/en-us/search/?terms=' + searchq, "_blank");
+    window.open('https://www.google.com/search?q="site:https://www.cvedetails.com ' + searchq, "_blank");
+    window.open("https://github.com/search?q=" + searchq, "_blank");
+    window.open("https://www.google.com/search?q=" + searchq, "_blank");
+}
+function protondb(){
+    var searchq = document.getElementById("inputid").value;
+    window.open('https://www.protondb.com/search?q=' + searchq, "_blank");
+}
+function allkey(){
+    var searchq = document.getElementById("inputid").value;
+    window.open('https://www.allkeyshop.com/blog/catalogue/search-' + searchq, "_blank");
+}
+
+</script>
+
+<input id="inputid" placeholder="Search..."><button onclick="document.getElementById('inputid').value = ''" style="left:0px;">C</button>
+</br>
+<div class="bbox">
+<button class="bth" onclick="googleq()">Google</button>
+<button class="bth"onclick="githubq()">Github</button>
+<button class="bth" onclick="combinedtabs()">Combined tabs</button>
+<button class="bth" onclick="googlecvesite()">Google CVE DETAILS SITE</button>
+<button class="bth" onclick="msdocsq()">Microsoft Docs</button>
+<button class="bth" onclick="torshit()">Ahmia Tor</button>
+<button class="bth" onclick="ddg()">DuckDuckGo</button>
+<button class="bth" onclick="yandex()">Yandex</button>
+<button class="bth" onclick="protondb()">Proton DB</button>
+<button class="bth" onclick="allkey()">allkeyshop</button>
+
+
+</div>
+</html>
