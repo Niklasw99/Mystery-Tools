@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <style>
 body{
-    #background-image:url("https://www.schemecolor.com/wallpaper?i=51839&desktop");
     background-color:#222;
 }
 .bth{
@@ -20,18 +19,7 @@ body{
     background-color: white;
 }
 .bthsmol{
-    border: 2px solid;
-    margin: 0.4rem;
-    font-size: 2.5rem;
-    color: white;
-    background-color:hsl(221, 67%, 41%);
-    border-radius: 15px;
-    border-color:rgb(0, 0, 0);
-    align-self: left;
-}
-.bthsmol:hover{
-    color: hsl(221, 67%, 41%);
-    background-color: white;
+    width: auto;
 }
 .inputbox{
     font-size: 2rem;
@@ -89,25 +77,22 @@ function combinedtabs(){
 
 </script>
 <center>
-<input id="urlsearch" class="urlsite" placeholder="URL"></input><button onclick="document.getElementById('urlsearch').value = ''" style="left:0px;" class="bthsmol">C</button>
-<input id="inputid" class="inputbox" placeholder="Search..."><button onclick="document.getElementById('inputid').value = ''" style="left:0px;" class="bthsmol">C</button>
+<input id="urlsearch" class="urlsite" placeholder="URL"></input><button onclick="document.getElementById('urlsearch').value = ''" style="left:0px;" class="bthsmol bth">C</button>
+<input id="inputid" class="inputbox" placeholder="Search..."><button onclick="document.getElementById('inputid').value = ''" style="left:0px;" class="bthsmol bth">C</button>
 </br>
 <div style="width:25%;"></div>
 <div class="bbox">
 <button class="bth" onclick="ultimatesearch(prefixsearch.googleprefix)">Google</button>
 <button class="bth" onclick="ultimatesearch(prefixsearch.duckduckgoprefix)">Duckduckgo</button>
 <button class="bth" onclick="ultimatesearch(prefixsearch.yanxdexprefix)">Yandex</button>
-
-<button class="bth"onclick="normalsearch(normalsearchdict.normalgithub)">Github</button>
+<buton class="bth"onclick="normalsearch(normalsearchdict.normalgithub)">Github</button>
 <button class="bth" onclick="combinedtabs()">Combined tabs</button>
 <button class="bth" onclick="normalsearch(normalsearchdict.cvesitegoogle)">CVE Detail</button>
 <button class="bth" onclick="normalsearch(normalsearchdict.normalahmia)">Ahmia Tor</button>
 <button class="bth" onclick="normalsearch(normalsearchdict.normalprotondb)">Proton DB</button>
 <button class="bth" onclick="normalsearch(normalsearchdict.normalallkeyshop)">allkeyshop</button>
 <button class="bth" onclick="normalsearch(normalsearchdict.normalms)">Microsoft Docs</button>
-
 </center>
-<!--Lets Try again-->
 </div>
 </div>
 </html>
