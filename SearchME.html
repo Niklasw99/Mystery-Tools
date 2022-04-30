@@ -12,8 +12,24 @@ body{
     background-color:hsl(221, 67%, 41%);
     border-radius: 15px;
     border-color:rgb(0, 0, 0);
+    align-self: left;
+    width: 40%;
 }
 .bth:hover{
+    color: hsl(221, 67%, 41%);
+    background-color: white;
+}
+.bthsmol{
+    border: 2px solid;
+    margin: 0.4rem;
+    font-size: 2.5rem;
+    color: white;
+    background-color:hsl(221, 67%, 41%);
+    border-radius: 15px;
+    border-color:rgb(0, 0, 0);
+    align-self: left;
+}
+.bthsmol:hover{
     color: hsl(221, 67%, 41%);
     background-color: white;
 }
@@ -23,7 +39,7 @@ body{
     width:auto;
 }
 .bbox{
-    width: 30rem;
+    width: 40rem;
 }
 .urlsite{
     width: 5rem;
@@ -83,11 +99,10 @@ function allkey(){
 
 </script>
 <center>
-<div style="width:100%;">
-<input id="urlsearch" class="urlsite" placeholder="URL"></input><button onclick="document.getElementById('urlsearch').value = ''" style="left:0px;" class="bth">C</button>
-<input id="inputid" class="inputbox" placeholder="Search..."><button onclick="document.getElementById('inputid').value = ''" style="left:0px;" class="bth">C</button>
+<input id="urlsearch" class="urlsite" placeholder="URL"></input><button onclick="document.getElementById('urlsearch').value = ''" style="left:0px;" class="bthsmol">C</button>
+<input id="inputid" class="inputbox" placeholder="Search..."><button onclick="document.getElementById('inputid').value = ''" style="left:0px;" class="bthsmol">C</button>
 </br>
-
+<div style="width:25%;"></div>
 <div class="bbox">
 <button class="bth" onclick="ultimatesearch(prefixsearch.googleprefix)">Google</button>
 <button class="bth" onclick="ultimatesearch(prefixsearch.duckduckgoprefix)">Duckduckgo</button>
@@ -95,11 +110,11 @@ function allkey(){
 
 <button class="bth"onclick="githubq()">Github</button>
 <button class="bth" onclick="combinedtabs()">Combined tabs</button>
-<button class="bth" onclick="googlecvesite()">Google CVE DETAILS SITE</button>
-<button class="bth" onclick="msdocsq()">Microsoft Docs</button>
+<button class="bth" onclick="googlecvesite()">G CVE Detail Site</button>
 <button class="bth" onclick="torshit()">Ahmia Tor</button>
 <button class="bth" onclick="protondb()">Proton DB</button>
 <button class="bth" onclick="allkey()">allkeyshop</button>
+<button class="bth" onclick="msdocsq()">Microsoft Docs</button>
 
 </center>
 <!--Lets Try again-->
