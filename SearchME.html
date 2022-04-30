@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <style>
 body{
-    background-color: black;
+    #background-image:url("https://www.schemecolor.com/wallpaper?i=51839&desktop");
+    background-color:#222;
 }
 .bth{
+    border: 2px solid;
     margin: 0.4rem;
-}
-button{
     font-size: 2.5rem;
     color: white;
-    background-color: darkslateblue;
-    border-radius: 25px;
-    border-color:black;
+    background-color:hsl(221, 67%, 41%);
+    border-radius: 15px;
+    border-color:rgb(0, 0, 0);
 }
-button:hover{
-    color: darkslateblue;
+.bth:hover{
+    color: hsl(221, 67%, 41%);
     background-color: white;
 }
 .inputbox{
     font-size: 2rem;
-    margin: 0.8rem;    
+    margin: 0.8rem;
+    width:auto;
 }
 .bbox{
     width: 30rem;
@@ -32,17 +33,22 @@ button:hover{
 </style>
 
 <script>
-function googleq() {
+var dict = {
+    googleprefix: "https://www.google.com/search?q=",
+    duckduckgoprefix: "https://duckduckgo.com/?q=",
+    yanxdexprefix: "https://yandex.com/search/?text="
+};
+function ultimatesearch(internalval) {
     if (document.getElementById("urlsearch").value !== ""){
         var searchq = document.getElementById("inputid").value;
-        window.open("https://www.google.com/search?q=site:" + document.getElementById("urlsearch").value + " " + searchq, "_blank");
+        window.open(internalval + "site:" + document.getElementById("urlsearch").value + " " + searchq, "_blank");
     }else{
         var searchq = document.getElementById("inputid").value;
-        window.open("https://www.google.com/search?q=" + searchq, "_blank");
+        window.open(internalval + searchq, "_blank");
+    }
 }
 
 
-}
 function githubq() {
     var searchq = document.getElementById("inputid").value;
     window.open("https://github.com/search?q=" + searchq, "_blank");
@@ -58,10 +64,6 @@ function msdocsq() {
 function torshit() {
     var searchq = document.getElementById("inputid").value;
     window.open('https://ahmia.fi/search/?q=' + searchq, "_blank");
-}
-function ddg() {
-    var searchq = document.getElementById("inputid").value;
-    window.open('https://duckduckgo.com/?q=' + searchq, "_blank");
 }
 function combinedtabs(){
     var searchq = document.getElementById("inputid").value;
@@ -80,25 +82,27 @@ function allkey(){
 }
 
 </script>
-<input id="urlsearch" class="urlsite" placeholder="URL"></input><button onclick="document.getElementById('urlsearch').value = ''" style="left:0px;">C</button>
-<input id="inputid" class="inputbox" placeholder="Search..."><button onclick="document.getElementById('inputid').value = ''" style="left:0px;">C</button>
+<center>
+<div style="width:100%;">
+<input id="urlsearch" class="urlsite" placeholder="URL"></input><button onclick="document.getElementById('urlsearch').value = ''" style="left:0px;" class="bth">C</button>
+<input id="inputid" class="inputbox" placeholder="Search..."><button onclick="document.getElementById('inputid').value = ''" style="left:0px;" class="bth">C</button>
 </br>
+
 <div class="bbox">
-<button class="bth" onclick="googleq()">Google</button>
+<button class="bth" onclick="ultimatesearch(dict.googleprefix)">Google</button>
+<button class="bth" onclick="ultimatesearch(dict.duckduckgoprefix)">Duckduckgo</button>
+<button class="bth" onclick="ultimatesearch(dict.yanxdexprefix)">Yandex</button>
+
 <button class="bth"onclick="githubq()">Github</button>
 <button class="bth" onclick="combinedtabs()">Combined tabs</button>
 <button class="bth" onclick="googlecvesite()">Google CVE DETAILS SITE</button>
 <button class="bth" onclick="msdocsq()">Microsoft Docs</button>
 <button class="bth" onclick="torshit()">Ahmia Tor</button>
-<button class="bth" onclick="ddg()">DuckDuckGo</button>
-<button class="bth" onclick="yandex()">Yandex</button>
 <button class="bth" onclick="protondb()">Proton DB</button>
 <button class="bth" onclick="allkey()">allkeyshop</button>
 
-
-
-
-
+</center>
 <!--Lets Try again-->
+</div>
 </div>
 </html>
