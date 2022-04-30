@@ -33,7 +33,7 @@ body{
 </style>
 
 <script>
-var dict = {
+var prefixsearch = {
     googleprefix: "https://www.google.com/search?q=",
     duckduckgoprefix: "https://duckduckgo.com/?q=",
     yanxdexprefix: "https://yandex.com/search/?text="
@@ -89,9 +89,9 @@ function allkey(){
 </br>
 
 <div class="bbox">
-<button class="bth" onclick="ultimatesearch(dict.googleprefix)">Google</button>
-<button class="bth" onclick="ultimatesearch(dict.duckduckgoprefix)">Duckduckgo</button>
-<button class="bth" onclick="ultimatesearch(dict.yanxdexprefix)">Yandex</button>
+<button class="bth" onclick="ultimatesearch(prefixsearch.googleprefix)">Google</button>
+<button class="bth" onclick="ultimatesearch(prefixsearch.duckduckgoprefix)">Duckduckgo</button>
+<button class="bth" onclick="ultimatesearch(prefixsearch.yanxdexprefix)">Yandex</button>
 
 <button class="bth"onclick="githubq()">Github</button>
 <button class="bth" onclick="combinedtabs()">Combined tabs</button>
