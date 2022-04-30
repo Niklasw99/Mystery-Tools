@@ -60,7 +60,9 @@ var normalsearchdict = {
     normalms: "https://docs.microsoft.com/en-us/search/?terms=",
     normalprotondb: "https://www.protondb.com/search?q=",
     normalahmia: "https://ahmia.fi/search/?q=",
-    normalallkeyshop: "https://www.allkeyshop.com/blog/catalogue/search-"
+    normalallkeyshop: "https://www.allkeyshop.com/blog/catalogue/search-",
+    cvesitegoogle: 'https://www.google.com/search?q="site:https://www.cvedetails.com ',
+
 };
 
 function ultimatesearch(internalval) {
@@ -77,16 +79,11 @@ function normalsearch(normalsearchparam){
     var searchq = document.getElementById("inputid").value;
     window.open(normalsearchparam + searchq, "_blank");
 }
-function googlecvesite() {
-    var searchq = document.getElementById("inputid").value;
-    window.open('https://www.google.com/search?q="site:https://www.cvedetails.com ' + searchq, "_blank");
-}
-
 function combinedtabs(){
     var searchq = document.getElementById("inputid").value;
-    window.open('https://docs.microsoft.com/en-us/search/?terms=' + searchq, "_blank");
-    window.open('https://www.google.com/search?q="site:https://www.cvedetails.com ' + searchq, "_blank");
-    window.open("https://github.com/search?q=" + searchq, "_blank");
+    window.open(normalsearchdict.normalms + searchq, "_blank");
+    window.open(normalsearchdict.cvesitegoogle + searchq, "_blank");
+    window.open(normalsearchdict.normalgithub + searchq, "_blank");
     window.open("https://www.google.com/search?q=" + searchq, "_blank");
 }
 
@@ -103,7 +100,7 @@ function combinedtabs(){
 
 <button class="bth"onclick="normalsearch(normalsearchdict.normalgithub)">Github</button>
 <button class="bth" onclick="combinedtabs()">Combined tabs</button>
-<button class="bth" onclick="googlecvesite()">CVE Detail</button>
+<button class="bth" onclick="normalsearch(normalsearchdict.cvesitegoogle)">CVE Detail</button>
 <button class="bth" onclick="normalsearch(normalsearchdict.normalahmia)">Ahmia Tor</button>
 <button class="bth" onclick="normalsearch(normalsearchdict.normalprotondb)">Proton DB</button>
 <button class="bth" onclick="normalsearch(normalsearchdict.normalallkeyshop)">allkeyshop</button>
