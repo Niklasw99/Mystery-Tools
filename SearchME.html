@@ -55,6 +55,14 @@ var prefixsearch = {
     duckduckgoprefix: "https://duckduckgo.com/?q=",
     yanxdexprefix: "https://yandex.com/search/?text="
 };
+var normalsearchdict = {
+    normalgithub: "https://github.com/search?q=",
+    normalms: "https://docs.microsoft.com/en-us/search/?terms=",
+    normalprotondb: "https://www.protondb.com/search?q=",
+    normalahmia: "https://ahmia.fi/search/?q=",
+    normalallkeyshop: "https://www.allkeyshop.com/blog/catalogue/search-"
+};
+
 function ultimatesearch(internalval) {
     if (document.getElementById("urlsearch").value !== ""){
         var searchq = document.getElementById("inputid").value;
@@ -65,37 +73,21 @@ function ultimatesearch(internalval) {
     }
 }
 
-
-function githubq() {
+function normalsearch(normalsearchparam){
     var searchq = document.getElementById("inputid").value;
-    window.open("https://github.com/search?q=" + searchq, "_blank");
+    window.open(normalsearchparam + searchq, "_blank");
 }
 function googlecvesite() {
     var searchq = document.getElementById("inputid").value;
     window.open('https://www.google.com/search?q="site:https://www.cvedetails.com ' + searchq, "_blank");
 }
-function msdocsq() {
-    var searchq = document.getElementById("inputid").value;
-    window.open('https://docs.microsoft.com/en-us/search/?terms=' + searchq, "_blank");
-}
-function torshit() {
-    var searchq = document.getElementById("inputid").value;
-    window.open('https://ahmia.fi/search/?q=' + searchq, "_blank");
-}
+
 function combinedtabs(){
     var searchq = document.getElementById("inputid").value;
     window.open('https://docs.microsoft.com/en-us/search/?terms=' + searchq, "_blank");
     window.open('https://www.google.com/search?q="site:https://www.cvedetails.com ' + searchq, "_blank");
     window.open("https://github.com/search?q=" + searchq, "_blank");
     window.open("https://www.google.com/search?q=" + searchq, "_blank");
-}
-function protondb(){
-    var searchq = document.getElementById("inputid").value;
-    window.open('https://www.protondb.com/search?q=' + searchq, "_blank");
-}
-function allkey(){
-    var searchq = document.getElementById("inputid").value;
-    window.open('https://www.allkeyshop.com/blog/catalogue/search-' + searchq, "_blank");
 }
 
 </script>
@@ -109,13 +101,13 @@ function allkey(){
 <button class="bth" onclick="ultimatesearch(prefixsearch.duckduckgoprefix)">Duckduckgo</button>
 <button class="bth" onclick="ultimatesearch(prefixsearch.yanxdexprefix)">Yandex</button>
 
-<button class="bth"onclick="githubq()">Github</button>
+<button class="bth"onclick="normalsearch(normalsearchdict.normalgithub)">Github</button>
 <button class="bth" onclick="combinedtabs()">Combined tabs</button>
 <button class="bth" onclick="googlecvesite()">CVE Detail</button>
-<button class="bth" onclick="torshit()">Ahmia Tor</button>
-<button class="bth" onclick="protondb()">Proton DB</button>
-<button class="bth" onclick="allkey()">allkeyshop</button>
-<button class="bth" onclick="msdocsq()">Microsoft Docs</button>
+<button class="bth" onclick="normalsearch(normalsearchdict.normalahmia)">Ahmia Tor</button>
+<button class="bth" onclick="normalsearch(normalsearchdict.normalprotondb)">Proton DB</button>
+<button class="bth" onclick="normalsearch(normalsearchdict.normalallkeyshop)">allkeyshop</button>
+<button class="bth" onclick="normalsearch(normalsearchdict.normalms)">Microsoft Docs</button>
 
 </center>
 <!--Lets Try again-->
