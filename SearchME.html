@@ -43,7 +43,7 @@ var prefixsearch = {
     duckduckgoprefix: "https://duckduckgo.com/?q=",
     yanxdexprefix: "https://yandex.com/search/?text="
 };
-var normalsearchdict = {
+var nsdict = {
     normalgithub: "https://github.com/search?q=",
     normalms: "https://docs.microsoft.com/en-us/search/?terms=",
     normalprotondb: "https://www.protondb.com/search?q=",
@@ -53,7 +53,7 @@ var normalsearchdict = {
 
 };
 
-function ultimatesearch(internalval) {
+function usearch(internalval) {
     if (document.getElementById("urlsearch").value !== ""){
         var searchq = document.getElementById("inputid").value;
         window.open(internalval + "site:" + document.getElementById("urlsearch").value + " " + searchq, "_blank");
@@ -63,15 +63,15 @@ function ultimatesearch(internalval) {
     }
 }
 
-function normalsearch(normalsearchparam){
+function ns(nsparam){
 var searchq = document.getElementById("inputid").value;
-window.open(normalsearchparam + searchq, "_blank");
+window.open(nsparam + searchq, "_blank");
 }
 function combinedtabs(){
 var searchq = document.getElementById("inputid").value;
-window.open(normalsearchdict.normalms + searchq, "_blank");
-window.open(normalsearchdict.cvesitegoogle + searchq, "_blank");
-window.open(normalsearchdict.normalgithub + searchq, "_blank");
+window.open(nsdict.normalms + searchq, "_blank");
+window.open(nsdict.cvesitegoogle + searchq, "_blank");
+window.open(nsdict.normalgithub + searchq, "_blank");
 window.open("https://www.google.com/search?q=" + searchq, "_blank");
 }
 
@@ -82,14 +82,14 @@ window.open("https://www.google.com/search?q=" + searchq, "_blank");
 </br>
 <div style="width:25%;"></div>
 <div class="bbox">
-<button class="bth" onclick="ultimatesearch(prefixsearch.googleprefix)">Google</button>
-<button class="bth" onclick="ultimatesearch(prefixsearch.duckduckgoprefix)">Duckduckgo</button>
-<button class="bth" onclick="ultimatesearch(prefixsearch.yanxdexprefix)">Yandex</button>
-<button class="bth"onclick="normalsearch(normalsearchdict.normalgithub)">Github</button>
+<button class="bth" onclick="usearch(prefixsearch.googleprefix)">Google</button>
+<button class="bth" onclick="usearch(prefixsearch.duckduckgoprefix)">Duckduckgo</button>
+<button class="bth" onclick="usearch(prefixsearch.yanxdexprefix)">Yandex</button>
+<button class="bth"onclick="ns(nsdict.normalgithub)">Github</button>
 <button class="bth" onclick="combinedtabs()">Combined tabs</button>
-<button class="bth" onclick="normalsearch(normalsearchdict.cvesitegoogle)">CVE Detail</button>
-<button class="bth" onclick="normalsearch(normalsearchdict.normalahmia)">Ahmia Tor</button>
-<button class="bth" onclick="normalsearch(normalsearchdict.normalprotondb)">Proton DB</button>
-<button class="bth" onclick="normalsearch(normalsearchdict.normalallkeyshop)">allkeyshop</button>
-<button class="bth" onclick="normalsearch(normalsearchdict.normalms)">Microsoft Docs</button>
+<button class="bth" onclick="ns(nsdict.cvesitegoogle)">CVE Detail</button>
+<button class="bth" onclick="ns(nsdict.normalahmia)">Ahmia Tor</button>
+<button class="bth" onclick="ns(nsdict.normalprotondb)">Proton DB</button>
+<button class="bth" onclick="ns(nsdict.normalallkeyshop)">allkeyshop</button>
+<button class="bth" onclick="ns(nsdict.normalms)">Microsoft Docs</button>
 </center></div></div></html>
