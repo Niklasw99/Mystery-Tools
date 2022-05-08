@@ -50,6 +50,11 @@ var nsdict = {
     normalahmia: "https://ahmia.fi/search/?q=",
     normalallkeyshop: "https://www.allkeyshop.com/blog/catalogue/search-",
     cvesitegoogle: 'https://www.google.com/search?q="site:https://www.cvedetails.com ',
+    normalreddit:'https://www.reddit.com/search/?q=',
+    redditcommunity: '&type=sr',
+    redditposts: '&type=link',
+    reddituser: '&type=user',
+    redditcomment: '&type=comment',
 
 };
 
@@ -62,11 +67,18 @@ function usearch(internalval) {
         window.open(internalval + searchq, "_blank");
     }
 }
-
+/*
 function ns(nsparam){
 var searchq = document.getElementById("inputid").value;
 window.open(nsparam + searchq, "_blank");
 }
+**/
+
+function ns(nsparam){
+var searchq = document.getElementById("inputid").value;
+window.open(nsparam[0] + searchq + nsparam[1], "_blank");
+}
+
 function combinedtabs(){
 var searchq = document.getElementById("inputid").value;
 window.open(nsdict.normalms + searchq, "_blank");
@@ -85,11 +97,16 @@ window.open("https://www.google.com/search?q=" + searchq, "_blank");
 <button class="bth" onclick="usearch(prefixsearch.googleprefix)">Google</button>
 <button class="bth" onclick="usearch(prefixsearch.duckduckgoprefix)">Duckduckgo</button>
 <button class="bth" onclick="usearch(prefixsearch.yanxdexprefix)">Yandex</button>
-<button class="bth"onclick="ns(nsdict.normalgithub)">Github</button>
+<button class="bth" onclick="ns(nsdict.normalgithub)">Github</button>
 <button class="bth" onclick="combinedtabs()">Combined tabs</button>
-<button class="bth" onclick="ns(nsdict.cvesitegoogle)">CVE Detail</button>
-<button class="bth" onclick="ns(nsdict.normalahmia)">Ahmia Tor</button>
-<button class="bth" onclick="ns(nsdict.normalprotondb)">Proton DB</button>
-<button class="bth" onclick="ns(nsdict.normalallkeyshop)">allkeyshop</button>
-<button class="bth" onclick="ns(nsdict.normalms)">Microsoft Docs</button>
+<button class="bth" onclick="ns([nsdict.cvesitegoogle,''])">CVE Detail</button>
+<button class="bth" onclick="ns([nsdict.normalahmia,''])">Ahmia Tor</button>
+<button class="bth" onclick="ns([nsdict.normalprotondb,''])">Proton DB</button>
+<button class="bth" onclick="ns([nsdict.normalallkeyshop,''])">allkeyshop</button>
+<button class="bth" onclick="ns([nsdict.normalms,''])">Microsoft Docs</button>
+<button class="bth" onclick="ns([nsdict.normalreddit,''])">Reddit</button>
+<button class="bth" onclick="ns([nsdict.normalreddit, nsdict.redditcommunity])">Reddit Community</button>
+<button class="bth" onclick="ns([nsdict.normalreddit, nsdict.redditposts])">Reddit Posts</button>
+<button class="bth" onclick="ns([nsdict.normalreddit, nsdict.reddituser])">Reddit User</button>
+<button class="bth" onclick="ns([nsdict.normalreddit, nsdict.redditcomment])">Reddit Comment</button>
 </center></div></div></html>
