@@ -55,6 +55,7 @@ var nsdict = {
     redditposts: '&type=link',
     reddituser: '&type=user',
     redditcomment: '&type=comment',
+    cheatography: 'https://cheatography.com/explore/search/?q='
 
 };
 
@@ -73,13 +74,21 @@ var searchq = document.getElementById("inputid").value;
 window.open(nsparam + searchq, "_blank");
 }
 Hello!
+Add cheatograhic in Search
+uses PLusses
+https://cheatography.com/explore/search/?q=123+456+789
+
 **/
 
 function ns(nsparam){
 var searchq = document.getElementById("inputid").value;
 window.open(nsparam[0] + searchq + nsparam[1], "_blank");
 }
-
+function ps(psparam){
+    let searchq = document.getElementById("inputid").value;
+    let modsearchq = searchq.replace(/ /gi, "+");
+     window.open(psparam + modsearchq, "_blank");
+}
 function combinedtabs(){
 var searchq = document.getElementById("inputid").value;
 window.open(nsdict.normalms + searchq, "_blank");
@@ -110,4 +119,6 @@ window.open("https://www.google.com/search?q=" + searchq, "_blank");
 <button class="bth" onclick="ns([nsdict.normalreddit, nsdict.redditposts])">Reddit Posts</button>
 <button class="bth" onclick="ns([nsdict.normalreddit, nsdict.reddituser])">Reddit User</button>
 <button class="bth" onclick="ns([nsdict.normalreddit, nsdict.redditcomment])">Reddit Comment</button>
+<button class="bth" onclick="ps(nsdict.cheatography)">Cheatography</button>
+
 </center></div></div></html>
