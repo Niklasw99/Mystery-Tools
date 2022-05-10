@@ -55,7 +55,8 @@ var nsdict = {
     redditposts: '&type=link',
     reddituser: '&type=user',
     redditcomment: '&type=comment',
-    cheatography: 'https://cheatography.com/explore/search/?q='
+    cheatography: 'https://cheatography.com/explore/search/?q=',
+    legaltldr: 'https://tldrlegal.com/search?q='
 
 };
 
@@ -115,5 +116,5 @@ window.open("https://www.google.com/search?q=" + searchq, "_blank");
 <button class="bth" onclick="ns([nsdict.normalreddit, nsdict.reddituser])">Reddit User</button>
 <button class="bth" onclick="ns([nsdict.normalreddit, nsdict.redditcomment])">Reddit Comment</button>
 <button class="bth" onclick="ps(nsdict.cheatography)">Cheatography</button>
-
+<button class="bth" onclick="ps(nsdict.legaltldr)">LegalTLDR</button>
 </center></div></div></html>
