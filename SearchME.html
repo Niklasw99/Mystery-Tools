@@ -56,7 +56,8 @@ var nsdict = {
     reddituser: '&type=user',
     redditcomment: '&type=comment',
     cheatography: 'https://cheatography.com/explore/search/?q=',
-    legaltldr: 'https://tldrlegal.com/search?q='
+    legaltldr: 'https://tldrlegal.com/search?q=',
+    googleimage:'https://www.google.com/search?q=Demon+Slayer+Doom+Slayer&tbm=isch'
 
 };
 
@@ -85,13 +86,20 @@ function ps(psparam){
     let modsearchq = searchq.replace(/ /gi, "+");
      window.open(psparam + modsearchq, "_blank");
 }
-function combinedtabs(){
+
+function pic(nsparam){
 var searchq = document.getElementById("inputid").value;
-window.open(nsdict.normalms + searchq, "_blank");
-window.open(nsdict.cvesitegoogle + searchq, "_blank");
-window.open(nsdict.normalgithub + searchq, "_blank");
-window.open("https://www.google.com/search?q=" + searchq, "_blank");
+window.open(nsparam[0] + searchq + nsparam[1], "_blank");
 }
+function pic(psparam){
+    let searchq = document.getElementById("inputid").value;
+    let modsearchq = searchq.replace(/ /gi, "+");
+     window.open(psparam + modsearchq + "&tbm=isch", "_blank");
+}
+
+
+
+
 
 </script>
 <center>
@@ -103,8 +111,7 @@ window.open("https://www.google.com/search?q=" + searchq, "_blank");
 <button class="bth" onclick="usearch(prefixsearch.googleprefix)">Google</button>
 <button class="bth" onclick="usearch(prefixsearch.duckduckgoprefix)">Duckduckgo</button>
 <button class="bth" onclick="usearch(prefixsearch.yanxdexprefix)">Yandex</button>
-<button class="bth" onclick="ns(nsdict.normalgithub)">Github</button>
-<button class="bth" onclick="combinedtabs()">Combined tabs</button>
+<button class="bth" onclick="ns([nsdict.normalgithub,''])">Github</button>
 <button class="bth" onclick="ns([nsdict.cvesitegoogle,''])">CVE Detail</button>
 <button class="bth" onclick="ns([nsdict.normalahmia,''])">Ahmia Tor</button>
 <button class="bth" onclick="ns([nsdict.normalprotondb,''])">Proton DB</button>
@@ -117,4 +124,5 @@ window.open("https://www.google.com/search?q=" + searchq, "_blank");
 <button class="bth" onclick="ns([nsdict.normalreddit, nsdict.redditcomment])">Reddit Comment</button>
 <button class="bth" onclick="ps(nsdict.cheatography)">Cheatography</button>
 <button class="bth" onclick="ps(nsdict.legaltldr)">Legal;TLDR</button>
+<button class="bth" onclick="pic(nsdict.googleimage)">Google Images</button>
 </center></div></div></html>
